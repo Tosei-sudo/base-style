@@ -1,0 +1,109 @@
+@use "../../config/mixin" as m;
+
+.selectable,
+.unSelectable {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.u_flex {
+    display: flex;
+}
+
+.newContents::after {
+    display: inline-block;
+    content: "NEW";
+    background: red;
+    color: #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    letter-spacing: -1px;
+    line-height: 1;
+    vertical-align: top;
+    margin: 0;
+    padding: 2px;
+    transform: scale(0.6) translateX(-30%);
+    animation: newAnime 0.7s infinite alternate;
+}
+
+@keyframes newAnime {
+    0% {
+        color: red;
+        background: #fff;
+    }
+
+    100% {
+        color: #fff;
+        background: red;
+    }
+}
+
+.u_uti_Command {
+    color: black;
+
+    &:active {
+        color: navy;
+    }
+}
+
+@include m.mq(tab_pc){
+    /* Tablet*/
+
+    .u_uti_Command:hover {
+        cursor: pointer;
+        color: rgb(0, 0, 179);
+    }
+
+    .u_uti_disp_sp {
+        display: none;
+    }
+}
+
+@include m.mq(smp) {
+    /* SmartPhone */
+
+    .u_uti_disp_pc {
+        display: none;
+    }
+}
+
+.u_hover:hover {
+    cursor: pointer;
+}
+
+.u_CardDesign {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    margin: 5px 5px;
+    box-shadow: -3px -3px 4px #eee;
+    padding: 5px 0;
+}
+
+/* ここから下はIDにより指定された特定用途CSS */
+
+#loginBTN {
+    background-image: url(/HumenFinder/file/img/btn_login_base.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    height: 55px;
+    width: 150px;
+
+    &:hover {
+        background-image: url(/HumenFinder/file/img/btn_login_hover.png);
+    }
+
+    &:active {
+        background-image: url(/HumenFinder/file/img/btn_login_press.png);
+    }
+}
+
+.ovf_x {
+    overflow-x: auto;
+}
+
+.ovf_y {
+    overflow-y: auto;
+}

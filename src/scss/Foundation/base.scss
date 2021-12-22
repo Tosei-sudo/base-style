@@ -1,0 +1,146 @@
+@use "../config/mixin" as m;
+
+* {
+    max-width: 100%;
+}
+
+label {
+    display: block;
+    margin: 0 0 4px;
+    padding-top: 10px;
+    padding-right: 5px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+h1, h2, h3 {
+    margin: 5px 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+[type=text], [type=email], [type=number], [type=password], [type=date], [type=url] {
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    padding: 2px 1px;
+    background-color: white;
+}
+
+[type=text]:focus, [type=email]:focus, [type=number]:focus, [type=password]:focus, [type=date]:focus, [type=url]:focus {
+    background-color: #EEFFFF;
+}
+
+[type=button], [type=submit] {
+    border-radius: 3px;
+    border: 1px solid gray;
+    background-color: #DDDDDD;
+    padding: 4px 10px;
+}
+
+select {
+    border-radius: 2px;
+    border: 1px solid gray;
+    background-color: white;
+    padding-top: 4px;
+    padding-right: 4px;
+    -moz-appearance: menulist;
+    -webkit-appearance: menulist;
+}
+
+textarea {
+    width: 500px;
+    height: 300px;
+    border: 1px solid gray;
+    resize: none;
+    background-color: white;
+}
+
+select::-ms-expand {
+    display: block;
+}
+
+[type=button]:active, [type=submit]:active {
+    background-color: #AAAAAA;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+@include m.mq(pc) {
+
+    a {
+        color: navy;
+
+        &:hover {
+            color: orangered;
+        }
+
+        &:active {
+            color: orange;
+        }
+    }
+}
+
+@include m.mq(tab_pc) {
+
+    [type=button]:hover, [type=submit]:hover {
+        background-color: #CCCCCC;
+    }
+}
+
+@include m.mq(tab_smp) {
+
+    a {
+        color: #0000EE;
+
+        &:visited {
+            color: #0000EE;
+        }
+    }
+}
+
+
+i {
+    color: black;
+    padding: 3px;
+
+    &:active {
+        color: navy;
+    }
+}
+
+.fa-trash-alt {
+    color: rgb(255, 60, 0);
+}
+
+.fa-code-branch {
+    color: green;
+}
+
+.fa-external-link-alt {
+    color: cadetblue;
+}

@@ -1,0 +1,43 @@
+@use "../../config/mixin" as m;
+
+.p_butnav {
+    border-top: solid 1.25px gray;
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    z-index: 12;
+    height: 10%;
+
+    a {
+        color: black;
+    }
+}
+
+.p_butnav_4 .p_butnav_record {
+    width: 25%;
+}
+
+.p_butnav_5 .p_butnav_record {
+    width: 20%;
+}
+
+.p_butnav_record {
+    padding: 5px;
+    list-style: none;
+    text-align: center;
+}
+
+.p_butnav_iconname {
+    margin-top: 5px;
+    display: block;
+    font-size: 10px;
+}
+
+@include m.mq(tab_pc){
+    .p_butnav {
+        display: none;
+    }
+}

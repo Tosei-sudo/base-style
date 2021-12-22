@@ -1,0 +1,71 @@
+@use "../config/mixin"as m;
+@use "../config/variable" as *;
+
+header {
+    .titleSection {
+        display: flex;
+        height: 70px;
+        background-color: $BaseColor;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    .URLPath {
+        background-color: $SubColor;
+        color: $BaseColor;
+        height: auto;
+        min-height: 40px;
+        padding-top: 5px;
+        padding-left: 15px;
+
+        ul {
+            margin: 0;
+        }
+
+        .urlLink {
+            display: inline-block;
+            font-size: auto;
+        }
+    }
+
+    .sub-item {
+        list-style: none;
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .title {
+        margin-right: auto;
+        color: #fff;
+
+        a {
+            color: #fff !important;
+            text-decoration: none;
+        }
+        @include m.mq(tab_pc) {
+            font-size: 2em;
+        }
+
+        @include m.mq(wsmp) {
+            font-size: 1.5em;
+        }
+
+        @include m.mq(msmp) {
+            font-size: 1.2em;
+        }
+    }
+
+    label {
+        color: #fff;
+    }
+
+    .title {
+        font-weight: 700;
+    }
+}

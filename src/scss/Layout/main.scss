@@ -1,0 +1,59 @@
+
+@use "../config/mixin" as m;
+@use "../config/variable" as *;
+
+main{
+    ol,ul{
+        border-radius: 5px;
+        padding: 10px 5px;
+        margin: 10px 5px;
+    }
+    ol{
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+    td,th{
+        padding: 2px 0;
+    }
+    @include m.mq(tab_pc){
+        flex : 1;
+        margin :7px 10px 0 10px;
+    }
+
+    @include m.mq(smp){
+        padding: 0 2px;
+    }
+}
+
+.main_ocean{
+    background: $SubColor;
+    border: 2px $ThirdColor dashed;
+}
+
+#page-top{
+    position: fixed;
+    bottom: 13%;
+    right: 20px;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 5;
+    a{
+        background: $ThirdColor;
+        text-decoration: none;
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        display: block;
+        border-radius: 30px;
+        opacity: 0.7;
+        transition: all .3s ease;
+    }
+    i{
+        margin: 16px 0;
+    }
+}
+
+[v-cloak] {
+    display:none;
+}

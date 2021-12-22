@@ -1,0 +1,41 @@
+@use "../../config/mixin"as m;
+
+#INFORMATION_AREA ol {
+    &.Warning {
+        background-color: #fcfcd4;
+        border: #FF0 dashed 2px;
+        color: #FFA500;
+    }
+
+    &.Danger {
+        background-color: #fff3f3;
+        border: red dashed 2px;
+        color: red;
+    }
+
+    &.Safety {
+        background-color: #f3fbff;
+        border: skyblue dashed 2px;
+        color: blue;
+    }
+
+    margin: 5px 0 10px;
+    padding: 3px 0 5px 10px;
+    border-radius: 10px;
+
+    h3 {
+        margin: 5px 0;
+    }
+}
+
+#INFORMATION_AREA {
+    margin: 0 auto;
+
+    @include m.mq(tab_pc) {
+        width: 70%;
+    }
+
+    @include m.mq(smp) {
+        width: 95%;
+    }
+}
