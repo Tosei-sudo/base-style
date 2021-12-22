@@ -62,7 +62,7 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             // 抽出する CSS のファイル名
-            filename: "[name].css",
+            filename: "[name].min.css",
         }),
         new VueLoaderPlugin(),
     ],
@@ -79,7 +79,7 @@ module.exports = {
         extensions: ['.ts', '.js', '.vue', '.json'],
     },
     entry: {
-        main: './src/index.js',
+        base: './src/index.js',
     },
     output: {
         filename: './[name].min.js',

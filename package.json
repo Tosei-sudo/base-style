@@ -1,5 +1,5 @@
 {
-  "name": "Template",
+  "name": "base-style",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tosei-sudo/Template.git"
+    "url": "git+https://github.com/Tosei-sudo/base-style.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Tosei-sudo/Template/issues"
+    "url": "https://github.com/Tosei-sudo/base-style/issues"
   },
-  "homepage": "https://github.com/Tosei-sudo/Template#readme",
+  "homepage": "https://github.com/Tosei-sudo/base-style#readme",
   "devDependencies": {
     "@types/node": "^16.11.11",
     "css-loader": "^6.5.1",
